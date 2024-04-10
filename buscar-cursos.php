@@ -1,8 +1,7 @@
+#!/usr/bin/env php
 <?php
 
 require 'vendor/autoload.php';
-
-
 
 use Alura\BuscadorDeCursos\Buscador;
 use GuzzleHttp\Client;
@@ -15,5 +14,5 @@ $buscardor = new Buscador($client, $crawler);
 $cursos = $buscardor->buscar('/cursos-online-programacao/php');
 
 foreach ($cursos as $curso) {
-    echo exibeMensagem($curso);
+    exibeMensagem($curso);
 }
